@@ -234,5 +234,6 @@ img{
     }
     .iconsofproject{  
         justify-content: center; /* Center icons on mobile */
+        padding: 0px;
     }
 }

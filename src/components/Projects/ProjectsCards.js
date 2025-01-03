@@ -39,7 +39,7 @@ const ProjectsCards = () => {
       projectName: "MY PORTFOLIO",
       icon1: FaGlobe,
       icon2: BsGithub,
-      link1: "https://portfolio-ten-theta-64.vercel.app/",
+      link1: "https://dharmik-personalportfolio.vercel.app/",
       link2: "https://github.com/Dharmik13/portfolio",
       projectDesc:
         "My Portfolio is a web-based application in which I describe My All details like 'Name' , 'Education' , 'Skills' , 'Projects' , 'Features' and More... ",
