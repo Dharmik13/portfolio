@@ -1,0 +1,11 @@
+.blackLinesPart{
+    display: flex;
+    justify-content: center;
+}
+.blackLine{
+    background-color: black;
+    width: 90vw;
+    height: 1px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}

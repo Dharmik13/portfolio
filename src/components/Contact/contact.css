@@ -1,0 +1,380 @@
+:root {
+    --shadow-color: #1c1e22;
+    --main-color: #ff014f;
+    --text-color: #9ca3af;
+    --background-color: #202327;
+  }
+
+.contactContainer{
+    width: 100%;
+    display: flex;
+
+    justify-content:space-evenly;
+    height: auto;
+    flex-wrap: wrap; 
+}
+
+.contactLeft{
+    padding: 2rem;
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px 19px var(--shadow-color), -10px -10px 19px #262a2e;
+    padding-bottom: 30px;
+    gap: 2rem;
+}
+
+/* .contactImg{
+    width: 80%;
+    border-radius: 0.5rem;
+    margin:  40px auto;
+    overflow: hidden;
+} */
+
+.contactImg img{
+    object-fit: cover;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 16rem;
+    margin-bottom: 0.5rem;
+    max-width: 100%;
+    display: block;
+    
+}
+
+.contactInfo{
+    color:#9ca3af;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    justify-content:space-evenly ;
+    text-align: left;
+}
+
+.developerName{
+    color: white;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+}
+
+.developerRole{
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.developerDesc{
+    letter-spacing: 0.025em;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.developerNumber , .developerEmail{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+
+
+
+
+/* contactRight */
+
+.contactRight{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px 19px var(--shadow-color), -10px -10px 19px #262a2e;
+    padding: 2rem;
+}
+
+form{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    gap: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.namePhone{
+    display: flex;
+    gap: 2.5rem;
+    width: 100%;
+}
+
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+
+label {
+    color: #9ca3af;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  input  {
+    height: 3rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    border-bottom-width: 1px;
+    border-bottom-color: #4b5563;
+    background-color: #191b1e;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color:#c4cfde;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition-duration: 300ms;
+  }
+
+  textarea{
+    width: 100%;
+    resize: none;
+    border-radius: 0.5rem;
+    border-bottom-width: 1px;
+    border-bottom-color: #4b5563;
+    background-color: #191b1e;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color:#c4cfde;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition-duration: 300ms;
+  }
+
+  input:focus , textarea:focus {
+    border-color:#ff014f; /* Optional: Highlight input on focus */
+  }
+
+
+  .btn:hover {
+    border-color:#ff014f; /* Optional: Highlight input on focus */
+  }
+
+  .contactButton{
+    width: 100%;
+  }
+
+  .btn{
+    transition-duration: 300ms;
+    color: #9ca3af;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    background-color: #141518;
+    border-color: transparent;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 3rem;
+    cursor: pointer;
+  }
+
+
+  .contacticonHeader {
+    font-size: 1rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #c4cfde;
+}
+
+.contactIcon{
+    display: flex;
+    gap: 1rem;
+}
+
+.contactIcon :hover {
+    color: #ff014f;
+    transform: translateY(-6px);
+    box-shadow: 15px 15px 24px #1c1e22, -15px -15px 24px #262a2e;
+}
+.ContactbannerIcon {
+    display: inline-flex;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    background-color: #00000040;
+    color: #e5e7eb;
+    font-size: 1.25rem;
+    box-shadow: 5px 5px 10px #1c1e22, -5px -5px 10px #262a2e;
+    transition: transform 0.3s ease;
+}
+
+.contactbannerIcon:hover {
+    color: #ff014f;
+    transform: translateY(-4px);
+}
+
+
+/* Media Queries */
+
+/* For Large Screens (Large Laptop, Desktop, Wide Screens) */
+/* @media (min-width: 1200px) {
+  .contactContainer {
+    justify-content: space-between;
+    padding: 2rem 5%;
+  }
+
+  .contactLeft,
+  .contactRight {
+    width: 45%;
+  }
+
+  .contactImg img {
+    height: 18rem;
+  }
+
+  .developerName {
+    font-size: 2rem;
+  }
+
+  .developerRole {
+    font-size: 1.25rem;
+  }
+
+  .developerDesc {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 1.125rem;
+    padding: 1.2rem;
+  }
+} */
+
+/* Medium Screens (Tablet, Small Laptops) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .contactContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contactLeft,
+  .contactRight {
+    width: 48%;
+  }
+
+  .contactImg img {
+    height: 15rem;
+  }
+
+  .developerName {
+    font-size: 1.75rem;
+  }
+
+  .developerRole {
+    font-size: 1.125rem;
+  }
+
+  .btn {
+    font-size: 1.125rem;
+  }
+}
+
+/* Tablets and Smaller Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .contactContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contactLeft,
+  .contactRight {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  .contactImg img {
+    height: 12rem;
+  }
+
+  .contactInfo {
+    text-align: center;
+  }
+
+  .contactIcon {
+    justify-content: center;
+  }
+
+  .namePhone {
+    flex-direction: column;
+  }
+
+  .formGroup {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Phones and Smaller Devices (max-width: 576px) */
+@media (max-width: 576px) {
+  .contactContainer {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .contactLeft,
+  .contactRight {
+    width: 100%;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .contactImg img {
+    height: 10rem;
+  }
+
+  .contactInfo {
+    text-align: center;
+  }
+
+  .contactIcon {
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 0rem;
+  }
+
+  .developerName {
+    font-size: 1.5rem;
+  }
+
+  .developerRole {
+    font-size: 1rem;
+  }
+
+  .developerDesc,
+  .developerNumber,
+  .developerEmail {
+    font-size: 0.875rem;
+  }
+}
+  

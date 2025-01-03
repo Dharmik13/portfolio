@@ -1,0 +1,422 @@
+/* 
+.bannerContainer{
+    
+    display: flex;
+    align-items: center;
+} */
+/* 
+.devinfo{
+    display: flex;
+    flex-direction: column;
+    height: 59vh;
+   
+    width: 50vw;
+    justify-content: center;
+   
+} */
+/*  
+.welcome{
+    margin-left: 6rem;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 3.75rem;
+    color: #c4cfde;
+}
+.hello{
+    
+    margin-left: 6rem;
+    color: white;
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 1;
+} */
+/* 
+.devName{
+    color: #ff014f;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 1;
+}
+.devRole{
+    margin-left: 6rem;
+    color: white;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 5.5rem;
+
+}
+.devDesc{
+    margin-left: 6rem;
+    letter-spacing: 0.025em;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-family: Poppins, sans-serif;
+    color: #c4cfde;
+}
+
+.iconContainer{
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.iconHeader{
+    font-size: 1rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: inherit;
+    color: #c4cfde;
+
+}
+
+.leftIcons{
+    
+    width: 25vw;
+    margin-top: 20px;
+    margin-left: 6rem;
+    
+}
+
+.rightIcons{
+    width: 25vw;
+    margin-top: 20px;
+   
+}
+.icons{
+    display: flex;
+    gap: 1rem;
+}
+.icons :hover{
+    color: #ff014f;
+    transform: translateY(-6px); 
+    box-shadow: 15px 15px 24px #1c1e22, -15px -15px 24px #262a2e; 
+}
+
+:root {
+    --shadow-color: #1c1e22;
+  }
+  
+  .element {
+    box-shadow: 10px 10px 19px var(--shadow-color), -10px -10px 19px var(--shadow-color);
+  }
+.bannerIcon{
+    display: inline-flex;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    background-color: #00000040;
+    --tw-bg-opacity: 0.25;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #e5e7eb;
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+} */
+
+/* Img part  */
+/* .devImg img{
+    width: 500px;
+    height: 680px;
+    margin-top: 15px;
+} */
+
+
+/* General Banner Styling */
+.bannerContainer { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #212428;
+}
+
+.devinfo {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50vw;
+    justify-content: center;
+}
+
+.welcome {
+    margin-top: 0px;
+ margin-left: 6rem;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 3.75rem;
+    color: #c4cfde;
+}
+
+.hello {
+    margin-left: 6rem;
+    color: white;
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 1;
+}
+
+.devName {
+    color: #ff014f;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 1;
+}
+
+.devRole {
+    margin-left: 6rem;
+    color: white;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 5.5rem;
+}
+
+.devDesc {
+    margin-left: 6rem;
+    letter-spacing: 0.025em;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-family: Poppins, sans-serif;
+    color: #c4cfde;
+}
+
+/* Icon Section */
+.iconContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0 2rem;
+}
+
+.iconHeader {
+    font-size: 1rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #c4cfde;
+}
+
+.leftIcons, .rightIcons {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+.icons :hover {
+    color: #ff014f;
+    transform: translateY(-6px);
+    box-shadow: 15px 15px 24px #1c1e22, -15px -15px 24px #262a2e;
+}
+
+/* Icon Hover Effects */
+:root {
+    --shadow-color: #1c1e22;
+}
+
+.element {
+    box-shadow: 10px 10px 19px var(--shadow-color), -10px -10px 19px var(--shadow-color);
+}
+
+.bannerIcon {
+    display: inline-flex;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    background-color: #00000040;
+    color: #e5e7eb;
+    font-size: 1.25rem;
+    box-shadow: 5px 5px 10px #1c1e22, -5px -5px 10px #262a2e;
+    transition: transform 0.3s ease;
+}
+
+.bannerIcon:hover {
+    color: #ff014f;
+    transform: translateY(-4px);
+}
+
+
+/* Img Part */
+.devImg img {
+    width: 500px;
+    height: 530px;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .bannerContainer {
+        padding: 1.5rem;
+        background-color: #212428;
+    }
+    
+    .devinfo, .leftIcons, .rightIcons {
+        margin-left: 2rem;
+        width: 100%;
+    }
+
+    .devDesc {
+        font-size: 0.9rem;
+    }
+
+    .devImg img {
+        width: 400px;
+        height: auto;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .bannerContainer {
+        flex-direction: column;
+        text-align: center;
+        padding:2rem;
+        background-color: #212428;
+        justify-content: center;
+       
+    }
+
+    .welcome, .hello, .devRole, .devDesc {
+        margin-left: 0;
+    }
+
+    .hello, .devName {
+        font-size: 2.5rem;
+    }
+
+    .devRole {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .devDesc {
+        font-size: 0.9rem;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .leftIcons, .rightIcons {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .devImg img {
+        width: 300px;
+        height: auto;
+    }
+
+    .iconContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .leftIcons, .rightIcons {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .icons {
+        gap: 0.5rem;
+    }
+    
+    .bannerIcon {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+
+    .bannerContainer {
+        width: 87%;
+        background-color: #212428; /* Full background color */
+        min-height: 100vh; /* Ensure full viewport height is covered */
+        justify-content: center; /* Center the content */
+        padding: 0rem 2rem;
+        
+    }
+    .iconContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 0rem 1rem;
+        margin-left: 2rem;
+        margin-top: 2.5rem;
+        
+    }
+    
+    .rightContainer{
+        margin-left: 4rem;
+    }
+    
+    .welcome {
+        font-size: 1rem;
+        line-height: 2.5rem;
+   
+    }
+
+    .hello {
+        font-size: 2rem;
+    }
+
+    .devName {
+        font-size: 2rem;
+    }
+
+    .devRole {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .devDesc {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+
+    .devImg img {
+        width: 250px;
+        height: auto;
+    }
+
+    .iconHeader {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .icons {
+        gap: 0.4rem;
+    }
+
+    .bannerIcon {
+        height: 3rem;
+        width: 3rem;
+        font-size: 1rem;
+    }
+}

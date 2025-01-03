@@ -1,0 +1,161 @@
+.footerContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 9rem;
+    gap: 20px;
+    width: 100%;
+}
+
+
+.image{
+    width: 13rem;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+   
+}
+
+.LinksPart h2{
+    color: #ff014f;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: inherit;
+}
+
+.linksPart{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    overflow: hidden;
+    gap: 1rem;  
+    list-style: none;
+    width: 100%;
+}
+
+.link{
+    transition-duration: 300ms;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    cursor: pointer;
+    position: relative;
+    color: #d1d5db;
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+ }
+
+ .link:hover{
+    color: #ff014f;
+ }
+
+.link::after {
+    content: ""; /* Decorative bottom border */
+    position: absolute;  
+    bottom: 0; /* Align at the bottom of text */
+    left: 0; /* Start from the left initially */
+    width: 0; /* Initially no width */
+    height: 1px; /* Height of the border */
+    background-color: #ff014f; /* Border color */
+    transition: all 0.3s ease; /* Smooth animation for width */
+    transform-origin: left; /* Animation expands from left to right by default */
+  }
+  
+  .link:hover::after {
+    width: 100%; /* Full width on hover */
+  }
+  
+  .link:not(:hover)::after {
+    transform-origin: right; /* Start re{tracting from the right */
+    width: 0; /* Retract to no width */
+    transition: all 0.3s ease; /* Smooth retraction animation */
+  }
+
+
+
+ /* Footer Bootom CSS */
+
+ .footerBottom{
+    width: 100%;
+    padding-bottom: 2.5rem;
+ }
+
+ .copyRight{
+    color: #6b7280;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    margin: 0;
+ }
+
+
+ /* Responsive Design */
+@media (max-width: 1200px) {
+    .footerContainer {
+        padding: 0 6rem;
+        gap: 15px;
+    }
+    .LinksPart h2 {
+        font-size: 1.125rem;
+    }
+    .link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .footerContainer {
+        padding: 0 4rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .LinksPart h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footerContainer {
+        padding: 0 2rem;
+    }
+    .image {
+        margin: 0 auto 1rem;
+        width: 6rem;
+    }
+    .LinksPart h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .linksPart {
+        align-items: center;
+        text-align: center;
+    }
+    .link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .footerContainer {
+        padding: 0 1rem;
+    }
+    .LinksPart h2 {
+        font-size: 0.9rem;
+    }
+    .link {
+        font-size: 0.8rem;
+    }
+    .copyRight {
+        font-size: 0.9rem;
+    }
+
+    .image{
+        margin: 0 auto 1rem;
+        width: 15rem;
+    }
+}

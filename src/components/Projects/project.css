@@ -1,0 +1,226 @@
+
+:root {
+    --shadow-color: #1c1e22;
+    --main-color: #ff014f;
+    --text-color: #9ca3af;
+    --background-color: #202327;
+  }
+  
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.headDesc{
+    color: #ff014f;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-family: Montserrat, sans-serif;
+}
+
+.heading{
+    font-size: 3rem;
+    line-height: 1.5;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+    color: rgba(209, 213, 219, 1);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+.projectcardRow{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 1rem;
+}
+
+.projectCard{
+    width: calc(30.33% - 10px);
+    margin-top: 2.5rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow: hidden;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px 19px var(--shadow-color), -10px -10px 19px #262a2e;
+  
+
+}
+
+.imageSec{
+    width: 80%;
+    border-radius: 0.5rem;
+    margin:  40px auto;
+    overflow: hidden;   
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    cursor: pointer;
+}
+
+.projectexplain{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+    margin-top:1.25rem;
+    justify-content: space-around;
+}
+
+.projectExpHeader{
+    display: flex;
+    justify-content :space-around;
+    align-items: center;
+
+}
+
+.projectExpHeader h3{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #ff014f;
+}
+
+.iconsofGandB{
+    display: flex;
+    gap: 0.5rem
+}
+
+.iconsofproject{
+    transition-duration: 300ms;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    background-color: black;
+    color: #9ca3af;
+    border-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-flex;
+   
+}
+
+.iconsofproject :hover{
+    color: #ff014f;
+}
+
+
+.projectdesc {
+    /* display: flex;
+    flex: 1; 
+    text-align: left;
+    justify-content: space-between;
+    align-items: center; */
+    width: 80%;
+    margin: auto;
+    letter-spacing: 0.025em;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-top: 0.75rem;
+    margin-bottom: 2rem;
+    transition-duration: 300ms;
+    color: #9ca3af;
+}
+
+
+/* responsive design  */
+
+@media (max-width: 1024px) {
+    .projectCard {
+        width: calc(45% - 10px); /* Make the cards take up 45% on tablets */
+    }
+
+    .heading {
+        font-size: 2.5rem; /* Smaller heading for tablets */
+    }
+
+    .projectdesc {
+        font-size: 0.95rem; /* Adjust project description text size */
+    }
+
+    .projectExpHeader h3 {
+        font-size: 1.2rem; /* Adjust font size for project name */
+    }
+
+    .iconsofproject {
+        font-size: 1rem; /* Smaller icons */
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+    .projectCard {
+        width: 100%; /* Full width cards for mobile */
+        margin-top: 1.5rem; /* Less margin for better mobile layout */
+        
+    }
+
+    .heading {
+        font-size: 2rem; /* Even smaller heading for mobile */
+    }
+
+    .headDesc {
+        font-size: 0.875rem; /* Smaller text for the description */
+    }
+
+    .projectdesc {
+        font-size: 0.875rem;
+        text-align: left; /* Left align the description for better readability on small screens */
+    }
+
+    .projectExpHeader {
+        flex-direction: column; /* Stack the title and icons vertically */
+        text-align: center; /* Center project name and icons */
+    }
+
+    .iconsofGandB {
+        justify-content: center; /* Center icons on mobile */
+    }
+
+    .iconsofproject {
+        font-size: 1rem;
+        width: 2rem;
+        height: 2rem;
+        margin: 5px 0px;
+    }
+}
+
+/* Extra Small Devices (e.g., Phones in portrait mode) */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.5rem; /* Further decrease heading size for small phones */
+    }
+
+    .headDesc {
+        font-size: 0.75rem; /* Smaller description for very small screens */
+    }
+
+    .projectdesc {
+        font-size: 0.75rem;
+        text-align: left;
+    }
+
+    .projectCard {
+        width: 100%;
+        margin-top: 1rem; /* Small margin on extra small screens */
+    }
+}

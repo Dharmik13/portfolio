@@ -1,0 +1,343 @@
+/* .featuresContainer {
+  width: 100%;
+  padding: 20px;
+
+}
+
+.featuresHeader {
+   
+    margin-left: 32px;
+    margin-bottom: 40px;
+  }
+
+.featuresheading{
+    letter-spacing: 0.025em;
+    color: #ff014f;
+    font-size: 0.875rem;
+    line-height: 2.25rem;
+    font-weight: 300;
+    font-family: Montserrat, sans-serif;
+}
+
+
+.featuresHeader h1{
+    color: rgba(209, 213, 219, 1);
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: Montserrat, sans-serif;
+}
+
+
+
+.cardRow{
+   
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+}
+
+:root {
+    --shadow-color: #1c1e22;
+  }
+  
+  .element {
+    box-shadow: 10px 10px 19px var(--shadow-color), -10px -10px 19px var(--shadow-color);
+  }
+     
+
+.card{
+    width: calc(30.33% - 20px); 
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background-color: rgb(32 35 39);
+    color: #9ca3af;
+    margin: 40px 10px;
+    height: 20rem; 
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    
+}
+
+.card:hover{
+    background-color: #1c1e22;
+}
+ 
+.card:hover .cardicons{
+
+    transform: translateY(-30px); 
+}
+.card:hover .common {
+    transform: translateY(-30px);
+  }
+  
+  .card:hover .arrowicon {
+    bottom: 10px;
+  }
+  
+
+
+.cardicons{
+    font-size: 3rem;
+    line-height: 1;
+    color: #ff014f;
+    transition: transform 0.3s ease;
+
+}
+
+
+.col-4{
+    width: 25.33333333333333%;
+}
+
+.common{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 28px;
+    position: relative;
+    transition: transform 0.3s ease;
+    
+}
+
+
+.cardHeader h2{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+} */
+
+
+ /* in arrowicon
+ 
+ position: relative;
+    bottom: -40px; Initially hide the arrow off the bottom of the card
+    right: 10px; */
+/*     
+.arrowicon{
+    font-size: 1.5rem;
+    color: #ff014f;
+   
+    transition: transform 0.3s ease;
+}  */
+/* 
+
+.hiarrow{
+    position: relative;
+    bottom: -30px;
+} */
+
+
+:root {
+    --shadow-color: #1c1e22;
+    --main-color: #ff014f;
+    --text-color: #9ca3af;
+    --background-color: #202327;
+  }
+  
+  .featuresContainer {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .featuresHeader {
+    margin-left: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .featuresheading {
+    letter-spacing: 0.025em;
+    color: var(--main-color);
+    font-size: 0.875rem;
+    line-height: 2.25rem;
+    font-weight: 300;
+    font-family: Montserrat, sans-serif;
+  }
+  
+  .featuresHeader h1 {
+    color: rgba(209, 213, 219, 1);
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: Montserrat, sans-serif;
+  }
+  
+  .cardRow {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    width: calc(30.33% - 20px);
+    padding: 2.5rem 3rem;
+    position: relative;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 20px 0;
+    height: 20rem;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px 19px var(--shadow-color), -10px -10px 19px #262a2e;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    transition: transform 0.3s ease;
+    overflow: hidden;
+  }
+  
+  /* .card:hover {
+    background-color: #1c1e22;
+    transform: translateY(-10px);
+  } */
+  .card:hover {
+    transform: translateY(-10px); /* Add a subtle lift to the card */
+}
+  /* .card:hover .cardicons,
+  .card:hover .common {
+    transform: translateY(-20px);
+  }
+  
+  .card:hover .arrowicon {
+    bottom: 10px;
+  } */
+
+  .hiarrow {
+    position: absolute;
+    bottom: -40px; /* Initially hidden below the card */
+    font-size: 1.25rem;
+    color: #ff014f;
+    opacity: 0;
+    transform: translateY(10px); /* Extra offset to ensure smooth transition */
+    transition: bottom 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+.card:hover .hiarrow {
+  bottom: 10px; /* Moves up into the card */
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+  
+  .cardicons {
+    font-size: 3rem;
+    color: var(--main-color);
+    transition: transform 0.3s ease;
+  }
+  
+  .common {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 28px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .cardHeader h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+  }
+  
+  .arrowicon {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    transition: transform 0.3s ease;
+  }
+  
+  .hiarrow {
+    position: relative;
+    bottom: -30px;
+  }
+  
+  /* Responsive Design */
+  
+  /* Tablet View */
+  @media (max-width: 768px) {
+    .featuresHeader {
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    .featuresheading {
+      font-size: 1rem;
+    }
+  
+    .featuresHeader h1 {
+      font-size: 2.25rem;
+    }
+  
+    .card {
+      width: calc(45% - 20px);
+    }
+  }
+  
+  /* Mobile View */
+  @media (max-width: 480px) {
+    .featuresheading {
+      font-size: 0.875rem;
+    }
+  
+    .featuresHeader h1 {
+      font-size: 1.75rem;
+    }
+  
+    .cardRow {
+      gap: 10px;
+    }
+  
+    .card {
+      width: 100%;
+      margin: 20px 0;
+      padding: 2rem;
+      position: relative; /* Needed for positioning child elements like .hiarrow */
+      overflow: hidden;
+    }
+  
+    .cardicons {
+      font-size: 2.5rem;
+    }
+  
+    .cardHeader h2 {
+      font-size: 1.25rem;
+    }
+  
+    .arrowicon {
+      font-size: 1.25rem;
+    }
+
+    .hiarrow {
+      position: absolute;
+      bottom: -40px; /* Initially hidden below the card */
+      font-size: 1.25rem;
+      color: #ff014f;
+      opacity: 0;
+      transform: translateY(10px); /* Extra offset to ensure smooth transition */
+      transition: bottom 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  }
+  .card:hover .hiarrow {
+    bottom: 10px; /* Moves up into the card */
+    opacity: 1;
+    transform: translateY(30px);
+}
+
+
+/* Non-hover state */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Add a subtle lift to the card */
+}
+  }
+  

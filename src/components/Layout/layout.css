@@ -1,0 +1,8 @@
+.layoutContainer{
+    background-color: #212428;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    /* top: 96px; */
+    top: 97px;
+}
