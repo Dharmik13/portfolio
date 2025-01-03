@@ -361,6 +361,7 @@
         min-height: 100vh; /* Ensure full viewport height is covered */
         justify-content: center; /* Center the content */
         padding: 0rem 2rem;
+        margin-top: 2rem;
         
     }
     .iconContainer {
