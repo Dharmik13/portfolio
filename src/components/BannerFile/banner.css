@@ -187,6 +187,7 @@
     font-size: 1rem;
     font-family: Poppins, sans-serif;
     color: #c4cfde;
+    text-align: justify;
 }
 
 /* Icon Section */
@@ -399,6 +400,9 @@
     .devDesc {
         font-size: 0.8rem;
         line-height: 1.3rem;
+        text-align: justify;
+        margin-top: 1rem;
+        
     }
 
     .devImg img {

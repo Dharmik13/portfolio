@@ -228,6 +228,12 @@ label {
     transform: translateY(-4px);
 }
 
+.error {
+  color: red;
+  font-size: 0.875rem; /* Adjust size if needed */
+  margin-top: 0.5rem;
+}
+
 
 /* Media Queries */
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Contact/contact.css";
 import contactImg from "../../assets/Contact/contactImg.png";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
@@ -6,12 +6,46 @@ import BlackLine from "../Black Line/BlackLine";
 import Swal from "sweetalert2";
 
 const ContactForm = () => {
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!userName) newErrors.userName = "Name is required!!!";
+    if (!email) {
+      newErrors.email = "Email is required!!!";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Email is invalid!!!";
+    }
+    if (!phone) {
+      newErrors.phone = "Phone number is required!!!";
+    } else if (phone.length !== 10 || !/^\d{10}$/.test(phone)) {
+      newErrors.phone = "Phone number must be exactly 10 digits.";
+    }
+
+    if (!subject) newErrors.subject = "Subject is required!!!";
+    if (!message) newErrors.message = "Message is required!!!";
+
+    return newErrors;
+  };
+
   const onSubmit = async (event) => {
     event.preventDefault();
-    const userName = document.getElementById("name").value;
-    const formData = new FormData(event.target);
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+    setErrors({});
 
+    const formData = new FormData(event.target);
     formData.append("access_key", "0d16e475-d9b1-4ac4-8bf7-6a797f448f26");
+    formData.set("subject", `${userName} sent a message from Your website`);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -33,9 +67,15 @@ const ContactForm = () => {
       }).then(() => {
         // Clear form fields
         document.querySelector("form").reset();
+        setUserName("");
+        setEmail("");
+        setPhone("");
+        setSubject("");
+        setMessage("");
       });
     }
   };
+
   return (
     <section>
       <div className="contactContainer">
@@ -81,36 +121,67 @@ const ContactForm = () => {
           <form onSubmit={onSubmit}>
             <div className="namePhone">
               <div className="formGroup">
-                <label htmlFor="name">your name</label>
-                <input type="text" id="name" name="name" />
+                <label htmlFor="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={userName}
+                  onChange={(e) => setUserName(e.target.value)}
+                />
+                {errors.userName && <p className="error">{errors.userName}</p>}
               </div>
-
               <div className="formGroup">
                 <label htmlFor="number">Phone Number</label>
-                <input type="text" id="number" name="number" />
+                <input
+                  type="text"
+                  id="number"
+                  name="number"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+                {errors.phone && <p className="error">{errors.phone}</p>}
               </div>
             </div>
-
             <div className="formGroup">
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="email" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              {errors.email && <p className="error">{errors.email}</p>}
             </div>
             <div className="formGroup">
               <label htmlFor="subject">Subject</label>
-              <input type="text" id="subject" name="subject" />
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+              />
+              {errors.subject && <p className="error">{errors.subject}</p>}
             </div>
             <div className="formGroup">
-              <label htmlFor="message">message</label>
-              <textarea name="message" rows={8} cols={30} />
+              <label htmlFor="message">Message</label>
+              <textarea
+                name="message"
+                rows={8}
+                cols={30}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+              {errors.message && <p className="error">{errors.message}</p>}
             </div>
-
             <div className="contactButton">
-              <button className="btn">send message</button>
+              <button className="btn">Send Message</button>
             </div>
           </form>
         </div>
       </div>
-
       <BlackLine />
     </section>
   );
