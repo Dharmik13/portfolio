@@ -7,12 +7,15 @@ import Skills from "../Skill/Skills";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 
+import EduExpHeader from "../Education And Experience/EduExpHeader";
+
 const Layout = () => {
   return (
     <div className="layoutContainer">
       <Banner />
       <FeaturesCards />
       <Project />
+      <EduExpHeader />
       <Skills />
       <Contact />
       <Footer />

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../Skill/skill.css";
 
 const SkillProgress = () => {
@@ -14,16 +14,37 @@ const SkillProgress = () => {
   ]);
 
   const [animatedProgress, setAnimatedProgress] = useState([]);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
-    // Trigger animation after component mounts
-    setTimeout(() => {
-      setAnimatedProgress(Skills.map((skill) => skill.progress));
-    }, 100); // Delay for smoother animation start
+    const handleIntersect = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setAnimatedProgress(Skills.map((skill) => skill.progress));
+        }
+      });
+    };
+
+    // Store ref in a local variable inside the effect
+    const currentSectionRef = sectionRef.current;
+
+    const observer = new IntersectionObserver(handleIntersect, {
+      threshold: 0.3, // Adjust threshold as needed
+    });
+
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef);
+    }
+
+    return () => {
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef);
+      }
+    };
   }, [Skills]);
 
   return (
-    <section>
+    <section ref={sectionRef}>
       <div className="skillContainer">
         {Skills.map((skill, index) => (
           <div className="progressBar" key={skill.id}>
@@ -33,7 +54,9 @@ const SkillProgress = () => {
                 className="lineInProgress"
                 style={{
                   width: animatedProgress[index] || "0%",
-                  animation: `fillBars 1.5s ease-out`,
+                  animation: animatedProgress[index]
+                    ? `fillBars 1.5s ease-out`
+                    : "none",
                 }}
               >
                 <span className="percentageText">{skill.progress}</span>
