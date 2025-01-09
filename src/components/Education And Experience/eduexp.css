@@ -92,6 +92,14 @@ main.row{
     box-shadow: var(--tw-shadow);
 }
 
+.resumeButton{
+    width: 50%;
+    margin: auto;
+}
+
+.resumeButton:hover{
+    box-shadow: 10px 10px 19px var(--shadow-color), -10px -10px 19px #262a2e;
+}
 @media(max-width: 768px){
 	main.row{
 		grid-template-columns: 1fr;
