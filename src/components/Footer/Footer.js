@@ -1,9 +1,10 @@
 import React from "react";
 import "../Footer/footer.css";
 import logo from "../../assets/images/mylogo.png";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+// import { FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import BlackLine from "../Black Line/BlackLine";
 import FooterBottom from "./FooterBottom";
+import SocialMediaIcons from "../Constant/SocialMediaIcons";
 
 const Footer = () => {
   return (
@@ -14,15 +15,7 @@ const Footer = () => {
             <img src={logo} alt="logo" />
           </div>
           <div className="contactIcon">
-            <span className="ContactbannerIcon">
-              <FaFacebookF />
-            </span>
-            <span className="ContactbannerIcon">
-              <FaTwitter />
-            </span>
-            <span className="ContactbannerIcon">
-              <FaLinkedinIn />
-            </span>
+            <SocialMediaIcons />
           </div>
         </div>
 

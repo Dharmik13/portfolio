@@ -1,22 +1,15 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaReact } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiFigma, SiNextdotjs } from "react-icons/si";
 import "../BannerFile/banner.css";
+import SocialMediaIcons from "../Constant/SocialMediaIcons";
 const MediaIcons = () => {
   return (
     <div className="iconContainer">
       <div className="leftIcons">
         <h2 className="iconHeader">FIND ME IN</h2>
         <div className="icons">
-          <span className="bannerIcon">
-            <FaFacebookF />
-          </span>
-          <span className="bannerIcon">
-            <FaTwitter />
-          </span>
-          <span className="bannerIcon">
-            <FaLinkedinIn />
-          </span>
+          <SocialMediaIcons />
         </div>
       </div>
 

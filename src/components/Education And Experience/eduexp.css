@@ -33,6 +33,7 @@ main.row{
 	position: relative;
 	padding: 20px;
     background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+    border-radius: 7px;
 	cursor: pointer;
 	transition: all 0.4s;
 	margin-bottom: 20px;

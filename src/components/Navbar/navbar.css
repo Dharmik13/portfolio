@@ -57,14 +57,16 @@ nav{
   
   .navbar-left {
     display: flex;
+    position: absolute;
+    left: 0;
+    top: 0rem;
   }
   
   .logoLeft{
-    font-size: 7rem;
+    font-size: 3rem;
   }
   .logoLeft img {
     width: 200px;
-    
   }
   
   
@@ -72,6 +74,9 @@ nav{
   .navbar_right {
     display: flex;
     gap: 1rem;
+    position: absolute;
+    right: 0px;
+    top: 2.3rem;
   }
   
   .navbar_right li{
